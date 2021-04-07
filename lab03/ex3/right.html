@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add data to save to cookie</title>
+</head>
+<script>
+    function addBlog () {
+        var blog = document.getElementById("blog").value;
+        if (blog != "") {
+            let cookies = blog;
+            document.cookie = cookies;
+            alert ("enter cookie ok")
+        } else {
+            alert ("enter this fill")
+        }
+    } 
+</script>
+<body>
+    <input type="text" placeholder="nhập nội dung blog" name="blog" id="blog" style="padding: 5% 5% 5% 5%; margin: 5% 5% 5% 5%;">
+    <input type="button" value="Add Cookie" onclick="addBlog();">
+</body>
+
+</html>
