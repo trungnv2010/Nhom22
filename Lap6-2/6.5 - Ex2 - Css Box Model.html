@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title> CSS Box Model </title>
+    <style> 
+      .container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10%;
+        margin-right: 10%;
+        border-width: 1;
+        border-color: brown;
+        border: solid;
+      }
+      .header {
+      
+        padding: 20;
+        background-color: brown;
+      }
+      .footer {
+        padding: 20;
+        background-color: burlywood;
+     
+      }
+      .body {
+        height: 600;
+        align-content: stretch;
+        justify-content: stretch;
+        align-items: stretch;
+        display: flex;
+        flex-direction: row;
+      }
+      .sidebar {
+        border-left: solid;
+        width: 20%;
+      }
+      .main {
+        width: 80%;
+      }
+    </style>
+
+  </head>
+    <body>
+        <div class="container"> 
+          <div class="header"> 
+            <h2> Shop Quần Áo Trí Trí </h2>
+          </div>
+          <div class="body"> 
+            <div class="main">
+              <h2> Hàng mới về 2021 </h2>
+            </div>
+            <div class ="sidebar">
+               <h4> title 1</h4>
+               <h4> title 2 </h4>
+            </div>
+          </div>
+          <div class="footer"> 
+            <h4> Facebook: Trí Trí</h4>
+            <h4> Điện thoại: 09224834832 </h4>
+            <h4> Địa chỉ: 299 Hoàng Mai </h4>
+          </div>
+        </div>
+    </body>
+</html>
