@@ -3,6 +3,6 @@
         'localhost',
         'root',
         '',
-        'webtrung')
+        'webdb')
     or die('Unable To connect');
 ?>
