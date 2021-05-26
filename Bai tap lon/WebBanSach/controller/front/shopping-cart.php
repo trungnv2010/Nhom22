@@ -1,11 +1,7 @@
 <?php
     session_start();
-    $con = mysqli_connect(
-    'localhost',
-    'root',
-    '',
-    'webtrung')
-    or die('Unable To connect');
+    include('../../../model/connect.php');
+    
     $checkCart = $_SESSION['id'];
     if(!isset($_SESSION['id'])) {
         header("Location: sign-in.php");
@@ -14,7 +10,7 @@
         $bookID = $_GET['bookid'];
         $userId = $_SESSION['id'];
         $amount = $_SESSION['amount'];
-        $result = mysqli_query($con, "SELECT * FROM books WHERE id = '$bookID'");
+        include('../../../model/front/books.php');
         $book = mysqli_fetch_array($result);
         $total = (int)$book['price']*(int)$amount;
         if($_SESSION['buy']){

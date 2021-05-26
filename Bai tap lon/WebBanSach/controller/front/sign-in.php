@@ -3,7 +3,7 @@
     $message="";
     if(count($_POST)>0) {
         include('../../../model/connect.php');
-        $result = mysqli_query($con,"SELECT * FROM users WHERE email='" . $_POST["email"] . "' and password = '". $_POST["password"]."'");
+        include('../../../model/front/sign-in.php');
         $row  = mysqli_fetch_array($result);
         if(is_array($row)) {
             //luu du lieu vao session

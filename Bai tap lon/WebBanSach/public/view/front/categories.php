@@ -57,14 +57,14 @@
                 while($row = mysqli_fetch_array($result)){
                     echo"
                     <div class=\"single-product-item\">
-                        <a href=\"./product-page.php?id={$row['id']}\">
+                        <a href=\"./product-page.php?bookid={$row['id']}\">
                             <figure>
                                 <img width= 270 height= 370 style=\"object-fit: cover;\" src=\"../../../img/products/{$row['image']}\" alt=\"\">
                                 <div class=\"p-status\">new</div>
                             </figure>
                         </a>    
                         <div style=\"text-align: center;\" class=\"product-text\">
-                            <a href=\"./product-page.php?id={$row['id']}\">
+                            <a href=\"./product-page.php?bookid={$row['id']}\">
                                 <h6>{$row['name']}</h6>
                             </a>
                             <p>{$row['price']} Đ</p>

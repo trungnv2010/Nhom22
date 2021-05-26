@@ -40,7 +40,7 @@
                     </thead>
                     <tbody> 
                         <?php
-                        while($order = mysqli_fetch_array($temp)){
+                        while($order = mysqli_fetch_array($orders)){
                             $checkShip = false;
                             $datediff = mysqli_fetch_array(mysqli_query($con, "SELECT ROUND(DATEDIFF(NOW(), `orderDate`)) as Date FROM orders WHERE orderId = '{$order['orderId']}'"));
                             if($order['methodShip'] == 'standard'){

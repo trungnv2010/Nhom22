@@ -3,8 +3,8 @@
     include('../../../model/connect.php');
     if(isset($_GET['orderId'])){
         $orderID = $_GET['orderId'];
-        $orderdetails = mysqli_query($con, "SELECT * FROM orderdetails WHERE orderId= '$orderID'");
-        $orders = mysqli_query($con, "SELECT * FROM orders WHERE orderId= '$orderID'");
+        include('../../../model/front/orders-details.php');
+        include('../../../model/front/orders.php');
         $order = mysqli_fetch_array($orders);
         $status = "";
         if($order['status'] == '0') $status = "Đang giao";

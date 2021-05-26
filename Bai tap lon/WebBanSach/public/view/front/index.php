@@ -20,8 +20,7 @@
             <img src="../../../img/background1.jpg" alt="">
         </div>
         <div class="info-banner" >
-            <h1 style="color:white;margin-left: 55px;" >2021</h1>
-            <h2 style="color: white; margin-left: 35px;" ">Tri Thức.</h2>
+            
             <a href="./categories.php" class="primary-btn">Xem Thêm</a>
         </div>
     </section>

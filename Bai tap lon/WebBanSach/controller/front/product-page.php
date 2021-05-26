@@ -1,18 +1,18 @@
 <?php
     session_start();
     include('../../../model/connect.php');
-    if(isset($_GET['id'])){
-        $id = $_GET['id'];
-        $result = mysqli_query($con, "SELECT * FROM books WHERE id = $id ");
+    if(isset($_GET['bookid'])){
+        $bookID = $_GET['bookid'];
+        include('../../../model/front/books.php');
         $row = mysqli_fetch_array($result);
         $total_product = mysqli_num_rows(mysqli_query($con, "SELECT * FROM books"));
-        $previous = $id-1;
-        $next = $id+1;
+        $previous = $bookID-1;
+        $next = $bookID+1;
         
     }
     if(isset($_POST['addCart'])){
-        $books = mysqli_fetch_array(mysqli_query($con, "SELECT amount FROM books WHERE id = {$_GET['id']}"));
-        $cart = mysqli_fetch_array(mysqli_query($con, "SELECT quantity FROM cart WHERE bookId = {$_GET['id']} AND userId = {$_SESSION['id']}"));
+        $books = mysqli_fetch_array(mysqli_query($con, "SELECT amount FROM books WHERE id = {$_GET['bookid']}"));
+        $cart = mysqli_fetch_array(mysqli_query($con, "SELECT quantity FROM cart WHERE bookId = {$_GET['bookid']} AND userId = {$_SESSION['id']}"));
         $_SESSION['amount'] = $_POST['amount'];
         $_SESSION['buy'] = true;
         if($books['amount'] - $cart['quantity'] >= $_SESSION['amount']){
